@@ -29,8 +29,8 @@ for postData in get_tweets( username, pages = 1 ):
     postList.append( post )
     
     
-    
-print( postList )
+print( profileData )
+##print( postList )
 ##print( len( postList ) )
 
 #print( postList )
