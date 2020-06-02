@@ -14,24 +14,40 @@ from twitter_scraper import Profile
 
 tUserList = []
 tUserList.append( "macmiller" )
+tUserList.append( "realDonaldTrump" )
 
 tUserObjs = []
 
 for x in range( len( tUserList ) ):
-    newUser = Profile( tUserList[x] )
-    newUserData = newUser.to_dict()
-    newUserObj = ( newUser, newUserData )
+    newUserId = tUserList[x]
+    newUser = Profile( newUserId )
+    
+    newUserPosts = []
+    for postData in get_tweets( newUserId, pages = 1 ):
+        postText = postData["text"]
+    
+        post = {
+            "text": postText,
+            "textList": postText.split(),
+            "isRetweet": postData["isRetweet"],
+            "likeCount": postData["likes"],
+            "replyCount": postData["replies"],
+            "retweetCount": postData["retweets"],
+        }
+  
+        newUserPosts.append( post )
+    
+    newUserObj = ( newUser, newUser.to_dict(), newUserPosts )
+    tUserObjs.append( newUserObj )
 
 
 
 
-print( newUserObj )
-print( type( newUserObj[1] ) )
+
+print( tUserObjs[1] )
 
 
-
-shit = newUserObj[1]
-print( shit )
+trump = tUserObjs[1]
 
 
 
