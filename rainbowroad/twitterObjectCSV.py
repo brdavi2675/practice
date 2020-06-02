@@ -58,7 +58,8 @@ userObjList = []
 ## for every account id in the list, get their info and add to obj list
 for userId in userIdList:
     print( userId ) ## account id
-    ##userObjList.append( createUserObj( userId ) )
+    userObjList.append( createUserObj( userId ) )
     
 
-print( userIdList[0] )
+print( userObjList )
+print( len(userObjList) )
