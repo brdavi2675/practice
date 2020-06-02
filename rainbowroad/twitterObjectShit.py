@@ -24,11 +24,12 @@ for x in range( len( tUserList ) ):
 
 
 print( newUserObj )
-print( newUserObj )
+print( type( newUserObj[1] ) )
 
 
 
-
+shit = newUserObj[1]
+print( shit )
 
 
 
