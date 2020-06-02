@@ -24,7 +24,7 @@ for x in range( len( tUserList ) ):
 
 
 print( newUserObj )
-print( newUserObj.)
+print( newUserObj )
 
 
 
