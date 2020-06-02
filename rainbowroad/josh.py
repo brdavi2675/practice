@@ -1,3 +1,6 @@
+## more random string shit
+
+
 tweet = "Hello, World! This is a messageto"
 tweetLen = len( tweet )
 

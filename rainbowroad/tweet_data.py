@@ -1,4 +1,6 @@
 ## HIIIIIIIIIIIIIIIII
+## scrapes a twitter user's info
+
 
 from twitter_scraper import get_tweets
 from twitter_scraper import get_trends

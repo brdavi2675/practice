@@ -1,4 +1,6 @@
 ## HIIIIIIIIIIIIIIIII
+## makes a list of objects that are (twitter profile scraper class, then their twitter data as a list)
+
 
 from twitter_scraper import get_tweets
 from twitter_scraper import get_trends

@@ -1,3 +1,7 @@
+## HI :3
+## object class shit
+
+
 class entityClass:
     def __init__( self, id ):
         self.id = id # set this to twitter id
