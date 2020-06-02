@@ -9,22 +9,21 @@ from twitter_scraper import get_trends
 from twitter_scraper import Profile
 
 
+## user class
 class userClass:
     def __init__( self, id, obj, info, posts ):
         self.id = id ## twitter id string
         self.obj = obj ## class object
         self.info = info ## account info like followers
         self.posts = posts ## list of the account's posts
-        
+    
+    ## getters
     def getId( self ):
         return self.id
-        
     def getObj( self ):
         return self.obj
-    
     def getInfo( self ):
         return self.info
-    
     def getPosts( self ):
         return self.posts
 
