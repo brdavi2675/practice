@@ -1,6 +1,8 @@
 ## HIIIIIIIIIIIIIIIII
-## next version of twitterObjectShit for more classes
+## reads from a csv file now
 
+
+import pandas as pd
 
 from twitter_scraper import get_tweets
 from twitter_scraper import get_trends
@@ -49,18 +51,14 @@ def createUserObj( id ):
     return newUserObj
 
 
-print( len(userIdList))
-userIdList = ( "macmiller", "realDonaldTrump", "BarackObama" ) ## list of users to grab data from
+## get a list of account ids from reading a csv file
+userIdList = pd.read_csv("twitter_accounts.csv" )
 userObjList = []
 
 ## for every account id in the list, get their info and add to obj list
-for x in range( len( userIdList ) ):
-    userObjList.append( createUserObj( userIdList[x] ) )
-    
-    
-for userId in range( len(userObjList) ):
-    test = userObjList[userId]
-    print( test.getId() )
+for userId in userIdList:
+    print( userId ) ## account id
+    ##userObjList.append( createUserObj( userId ) )
     
 
-
+print( userIdList[0] )
