@@ -18,15 +18,15 @@ class userClass:
         
     def getId( self ):
         return self.id
+        
+    def getObj( self ):
+        return self.obj
     
     def getInfo( self ):
         return self.info
     
     def getPosts( self ):
         return self.posts
-    
-    def getObj( self ):
-        return self.obj
 
 
 ## add a new user object given their account id
